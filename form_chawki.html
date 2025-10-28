@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            direction: ltr;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #2C4E68;
+        }
+        h3 {
+            text-align: center;
+            color: #555;
+            font-weight: normal;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .buttons {
+            text-align: right;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button[type="submit"] {
+            background-color: #2C4E68;
+            color: white;
+        }
+        button[type="reset"] {
+            background-color: #aaaaaa;
+            color: white;
+        }
+        button[type="submit"]:hover {
+            background-color: #3b698d;
+        }
+        button[type="reset"]:hover {
+            background-color: #c0c0c0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formulaire de contact</h2>
+    <h3>nom de prof: Pr. Y. Chawki</h3>
+
+    <form action="#" method="get">
+        
+        <div>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom_etudiant" required>
+        </div>
+        
+        <div>
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom_etudiant" required>
+        </div>
+        
+        <div>
+            <label for="email">Email (doit terminer par @gmail.com):</label>
+            <input type="email" id="email" name="email_etudiant" 
+                   required 
+                   pattern="[a-z0-9._%+-]+@gmail\.com"
+                   title="Veuillez entrer une adresse email valide se terminant par @gmsik.com">
+        </div>
+        
+        <div>
+            <label for="filiere">Filière:</label>
+            <select id="filiere" name="filiere_etudiant" required>
+                <option value="">-- Choisissez votre filière --</option>
+                <option value="IA">IAIL</option>
+                <option value="CS">Cybersécurité</option>
+                <option value="SRI">SRI</option>
+                   <option value="ECONOMIE">ECONOMIE</option>
+                <option value="Autre">Autre</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="question">Question:</label>
+            <textarea id="question" name="question" rows="6" required></textarea>
+        </div>
+        
+        <div class="buttons">
+            <button type="reset">Annuler</button>
+            <button type="submit">Envoyer</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
